@@ -1,0 +1,1273 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: fixed;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.perl-list {
+  margin-top: 100px;
+  display: block;
+}
+.perl-list ul li {
+  display: inline-block;
+  border: 1px solid skyblue;
+  padding: 5px;
+  width: 150px;
+  color: rgb(12, 12, 12);
+}
+.Input-fild input {
+  margin-top: 30px;
+  height: 25px;
+}
+.Add-button {
+  height: 32px;
+  width: 100px;
+  background-color: rgb(233, 230, 227);
+  margin-left: 25px;
+}
+
+/* App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------- Header Styles */
+.header {
+  background-color: #5b5461;
+  color: #ecf0f1;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  font-size: 18px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header nav ul li {
+  display: inline;
+}
+
+.header nav ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+  background-color: #0f76dd;
+  color: #ffffff;
+}
+
+@media (max-width: 810px) {
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .header nav {
+    display: none;
+    width: 100%;
+    text-align: left;
+  }
+
+  .header nav.nav-open {
+    display: block;
+  }
+
+  .header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header nav ul li {
+    width: 100%;
+  }
+
+  .header nav ul li a {
+    display: block;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 15px;
+  }
+
+  .header h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/*-------------------------------------------------------------QuizContent Styles------------------------------------------------------------------  */
+
+.quiz-content {
+  padding: 20px;
+  max-width: 1200px; /* Limit the width of the page */
+  margin: auto; /* Center the page */
+  background-color: #f9f9f9; /* Light background color for contrast */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-top: 56px;
+}
+
+.question-container {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.question-container p {
+  padding: 15px;
+  background: rgb(226, 225, 225);
+  border-radius: 2px;
+}
+
+.question-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.question-container label {
+  margin-bottom: 0.5rem;
+}
+
+.question-container {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.question-container p {
+  padding: 15px;
+  background: rgb(239, 239, 239); /* Slightly lighter gray background */
+  border-radius: 4px;
+  font-weight: bold; /* Make question text bold */
+}
+.title-name {
+  text-align: center;
+  font-weight: bold;
+  color: #1748ce;
+}
+
+.question-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.question-container label {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 16px; /* Consistent font size */
+}
+
+.question-container input[type="radio"] {
+  margin-right: 10px; /* Space between radio button and label */
+}
+
+.quiz-navigation {
+  display: flex;
+  justify-content: center; /* Center-aligns the buttons horizontally */
+  gap: 10px; /* Space between buttons */
+  padding: 1rem; /* More padding around the container */
+  position: fixed; /* Fixes the container at the bottom */
+  bottom: 0; /* Aligns the container to the bottom of the viewport */
+  left: 0; /* Aligns the container to the left edge */
+  width: 100%; /* Ensures the container spans the full width */
+  background-color: #ffffff; /* White background for a clean look */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Shadow to separate from content */
+}
+
+.quiz-navigation button {
+  background-color: #007bff; /* Primary color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.quiz-navigation button:disabled {
+  background-color: #d6d6d6; /* Light gray color for disabled state */
+  color: #a0a0a0; /* Gray text color */
+  cursor: not-allowed; /* Change cursor to not-allowed */
+}
+
+.quiz-navigation button:not(:disabled):hover {
+  background-color: #0056b3; /* Darker blue background on hover */
+  color: #fff; /* White text on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.submit-button {
+  background-color: #1748ce; /* Green color for submit button */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+/* ///Result page css------------------------------------------- */
+
+.results-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 95.5vh;
+  background-color: #e0f7fa; /* Soft cyan background */
+  padding: 20px;
+}
+
+.results-card {
+  background: #ffffff; /* White background for the card */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for depth */
+  padding: 50px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.results-card:hover {
+  transform: translateY(-10px); /* Subtle lift effect on hover */
+}
+
+.results-card h2 {
+  font-size: 28px; /* Larger font size for the heading */
+  margin-bottom: 25px;
+  color: #007bff; /* Primary blue color */
+  text-transform: uppercase; /* Make the heading uppercase */
+}
+
+.results-card p {
+  font-size: 20px; /* Larger font size for paragraphs */
+  margin: 15px 0; /* Increased spacing */
+  color: #555; /* Soft gray for paragraph text */
+}
+
+.results-card span {
+  font-weight: bold;
+  color: #000; /* Darker color for better readability */
+}
+
+.review-quiz-button,
+.previous-button {
+  background-color: #007bff; /* Primary blue color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px; /* Larger padding for buttons */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+}
+
+.review-quiz-button:hover,
+.previous-button:hover {
+  background-color: #0056b3; /* Darker blue shade on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow on hover */
+}
+
+.previous-button {
+  margin-right: 10px; /* Space between buttons */
+}
+
+.review-quiz-button:focus,
+.previous-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Focus ring for accessibility */
+}
+.option.correct {
+  background-color: red; /* Set the background color to red for correct options */
+  color: white;
+}
+
+/* ---------------------------Quiz previous button css---------------------------- */
+.previous-button {
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+  margin-top: 20px;
+}
+
+.previous-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.previous-button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+.previous-button:active {
+  background-color: #004a9a; /* Even darker blue on click */
+  transform: scale(1); /* Remove scaling on click */
+}
+
+/* -------------------------This is Review page css ------------------------------- */
+.review-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 135px;
+}
+
+.review-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.question-container {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.question-text {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.options {
+  margin-top: 10px;
+}
+
+.option {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.option label {
+  margin-left: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Ensure that correct answers are styled correctly */
+.option.correct {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724; /* Dark green text color */
+  padding: 10px;
+}
+
+.option:hover {
+  background-color: #f1f1f1;
+}
+
+/* ---------This is Remaining time css ------------------------------------------------------------------------------------------------------------------------ */
+/* Professional Timer Styling */
+
+.timer {
+  position: fixed;
+  font-size: 18px;
+  color: #f31818; /* Dark gray color for a clean, professional look */
+  font-weight: 600;
+  background-color: #f9f9f9; /* Light gray background for subtle contrast */
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: right;
+  margin: 20px auto;
+  margin-left: 50%;
+  width: fit-content;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border: 1px solid #ddd; /* Light border for a subtle outline */
+}
+
+.timer.low-time {
+  color: #d9534f; /* Bootstrap's red for urgency */
+  background-color: #fff5f5; /* Very light red background for urgency */
+  border-color: #d9534f;
+}
+
+.timer .warning {
+  color: #d9534f;
+  animation: fadeInOut 1s infinite; /* Professional fade animation */
+}
+@media (max-width: 412px) {
+  .timer {
+    margin-left: 53%;
+  }
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ----------------------------------------------------This is Remaning Popup Box Css---------------------------------------------------- */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.popup-content h2 {
+  margin-bottom: 10px;
+}
+
+.popup-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.popup-content button:hover {
+  background-color: #d32f2f;
+}
+
+/* --------------------------------------------------------------------------Login page css--------------------------------------------- */
+/* Container for the entire login page */
+.admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  font-family: "Arial", sans-serif;
+}
+
+/* Box containing the login form */
+.admin-login-box {
+  background-color: rgba(255, 255, 255, 0.2); /* 80% transparent */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+  backdrop-filter: blur(10px); /* Apply blur effect for better transparency */
+}
+
+/* Main heading for the login page */
+.admin-login-heading {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #ffffff; /* White color to contrast with background */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Subheading text below the main heading */
+.admin-login-subheading {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #ffffff; /* White color for better readability */
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Form container */
+.admin-login-form {
+  margin-bottom: 25px;
+}
+
+/* Styling for the email and password input fields */
+.admin-login-input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+  color: #ffffff; /* White color for better readability */
+  background-color: rgba(255, 255, 255, 0.3); /* Light transparent background */
+  transition: border-color 0.3s ease;
+  margin-left: -16px;
+}
+
+.admin-login-input:focus {
+  border-color: #ffffff; /* White border on focus */
+  outline: none;
+}
+
+/* Error message styling */
+.admin-login-error {
+  color: #ffcccc;
+  font-size: 12px;
+  margin-bottom: 10px;
+  display: block;
+  font-style: italic;
+}
+
+/* Login button styling */
+.admin-login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(
+    90deg,
+    #ff7e5f,
+    #feb47b
+  ); /* Gradient button background */
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.admin-login-btn:hover {
+  background-color: #ff6f61;
+  transform: translateY(-2px);
+}
+
+/* Additional information section below the form */
+.admin-login-info {
+  font-size: 14px;
+  color: #ffffff; /* White color for better readability */
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* Link styling for the signup page */
+.admin-login-info a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.admin-login-info a:hover {
+  color: #ff6f61; /* Hover effect for links */
+  text-decoration: underline;
+}
+
+/* Additional styling to make the text look even better */
+.admin-login-heading,
+.admin-login-subheading,
+.admin-login-info {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for better readability */
+}
+
+.admin-login-box p {
+  margin-bottom: 15px;
+  color: #ffffff; /* White color for better readability */
+  line-height: 1.7;
+}
+
+.admin-login-box input::placeholder {
+  color: #ffffff; /* White color placeholder */
+  font-style: italic;
+}
+@media (max-width: 412px) {
+  .admin-login-box {
+    width: 270px;
+  }
+}
+
+/* ---------------------Password Show Icons Css---------------------------- */
+.password-toggle-icon {
+  position: absolute;
+  right: 37px;
+  top: 51%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #ffffff;
+  user-select: none;
+}
+
+@media (max-width: 412px) {
+  .password-toggle-icon {
+    position: absolute;
+    right: 37px;
+    top: 53%;
+  }
+}
+
+/* ----------------------------------------------------------------------AdminDashboard css----------------------------------------- */
+/* CSS for the AdminDashboard component */
+.admin-dashboard {
+  font-family: "Arial", sans-serif;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.admin-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.admin-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.admin-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.dashboard-card {
+  flex: 1 1 300px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.dashboard-card h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.category-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.category-button {
+  background-color: #ac9f77;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+  background-color: #45a049;
+}
+
+.count-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+@media (max-width: 810px) {
+  .admin-header {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .admin-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-card {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+@media (max-width: 428px) {
+  .dashboard-card {
+    width: 85%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-header h1 {
+    font-size: 2em;
+  }
+
+  .admin-header p {
+    font-size: 1em;
+  }
+
+  .dashboard-card {
+    padding: 20px;
+  }
+
+  .dashboard-card h2 {
+    font-size: 1.5em;
+  }
+
+  .category-button {
+    font-size: 1em;
+    padding: 12px;
+  }
+}
+/* ------------------------Pie chart css------------------------- */
+.pie-chart-card {
+  background-color: #ffffff; /* White background for a clean look */
+  padding: 30px; /* Increased padding for better spacing */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for a more prominent card */
+  margin-bottom: 30px; /* Larger margin for spacing between cards */
+  text-align: center; /* Center text alignment */
+  border: 1px solid #e0e0e0; /* Light border for subtle separation */
+}
+
+.pie-chart-card h2 {
+  font-size: 24px; /* Increase font size for the heading */
+  color: #333; /* Darker text color for better readability */
+  margin-bottom: 20px; /* Maintain bottom margin */
+}
+
+.pie-chart-card p.chart-note {
+  font-size: 14px; /* Smaller font size for the note */
+  color: #888; /* Lighter text color for the note */
+  margin-top: 15px; /* Margin above the note */
+}
+
+/* -----------------------------------------------------------Add Question css---------------------------------------------------- */
+
+.add-question-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  padding: 20px;
+}
+
+.add-question {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 63px;
+}
+
+.add-question h2 {
+  font-size: 2rem;
+  color: #cfcbcb;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.add-question form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-question label {
+  font-size: 1rem;
+  color: #e0dddd;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.add-question input[type="text"],
+.add-question textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #88b1f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.add-question input[type="text"]:focus,
+.add-question textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+.add-question textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.add-question button {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-question button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.add-question button:active {
+  transform: translateY(1px);
+}
+
+.add-question .back-button {
+  background-color: #6b7280;
+  margin-top: 20px;
+}
+
+.add-question .back-button:hover {
+  background-color: #4b5563;
+}
+
+@media (max-width: 640px) {
+  .add-question {
+    padding: 30px;
+  }
+
+  .add-question h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* -------------------------------------------------------------------------Error message------------------- */
+.admin-error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8d7da;
+  color: #721c24;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-error-title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.admin-error-message {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-error-home-link {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: #c82333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.admin-error-home-link:hover {
+  background-color: #a71d2a;
+}
+
+/* --------------------------------------------------Select Perticular question by question number css------------------------------- */
+.slider {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #f4f4f4;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.slider ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+
+.slider li {
+  margin: 5px;
+}
+
+.slider button {
+  width: 40px; /* Adjust width */
+  height: 40px; /* Adjust height */
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px; /* Align text vertically */
+  font-size: 14px;
+  border-radius: 4px; /* * Rounded corners for a subtle effect */
+}
+
+.slider .attempted {
+  background-color: #28a745; /* Green background for attempted questions */
+  color: #fff;
+}
+
+.slider .not-attempted {
+  background-color: #f8d7da; /* Light red background for not attempted questions */
+  color: #721c24;
+}
+
+.slider-toggle-button {
+  position: fixed;
+  right: 469px;
+  top: 209px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  border-radius: 5px;
+}
+.header-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+.timer {
+  margin-top: 10px; /* Space between the button and the timer */
+}
+
+.slider-toggle-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.slider-toggle-button:hover {
+  background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+@media (max-width: 412px) {
+  .slider-toggle-button {
+    right: 2px;
+    top: 233px;
+  }
+}
+/* -----------------Slider text css------------------------------------------------------------------------- */
+.slider h1 {
+  font-size: 22px; /* Increased font size for prominence */
+  color: #2c3e50; /* Darker text color for better readability */
+  margin-bottom: 15px; /* More space below the title */
+  font-weight: 700; /* Extra bold text */
+  line-height: 1.4; /* Line height for readability */
+  text-align: center; /* Center align the text */
+  text-transform: uppercase; /* Uppercase text for emphasis */
+  letter-spacing: 1px; /* Slightly increased letter spacing */
+  padding: 10px; /* Padding around the title */
+  background-color: #c3e8f1; /* Light background color for contrast */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* --------------------------------------------------Start Popup css------------------------------------------ */
+.initial-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 82px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+}
+
+/* ----------------------------------------------------Home Page Css------------------------------------body */
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+.homepage-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.homepage-header h1 {
+  font-size: 2.5em;
+  color: #a89f9f;
+  margin: 0;
+}
+
+.homepage-header p {
+  font-size: 1.2em;
+  color: #a89f9f;
+}
+
+.quiz-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-category-card {
+  background-color: rgba(255, 255, 255, 0.2); /* 80% transparent */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+  backdrop-filter: blur(10px); /* Apply blur effect for better transparency */
+}
+/* Media queries for very small screens */
+@media (max-width: 512px) {
+  .home-category-card {
+    width: 286px;
+  }
+}
+@media (max-width: 414px) {
+  .homepage-container {
+    margin-top: 218px;
+  }
+}
+@media (max-width: 428px) {
+  .homepage-container {
+    margin-top: 222px;
+  }
+}
+@media (max-width: 360px) {
+  .home-category-card {
+    width: 249px;
+  }
+}
+
+.home-category-card:hover {
+  transform: scale(1.05);
+}
+
+.home-category-card h2 {
+  font-size: 1.5em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.start-quiz-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.start-quiz-button:hover {
+  background-color: #0056b3;
+}
+
+/* ///////////////////////// */
+.review-content {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 135px;
+  max-width: 100%;
+}
+.review-content h2 {
+  text-align: center;
+  color: #895eff;
+}
+
+.question-container {
+  margin-bottom: 20px;
+}
+
+.question-container p {
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li.option {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+li.correct {
+  background-color: green;
+  color: white;
+}
+
+li.incorrect {
+  background-color: red;
+  color: white;
+}
+.back-to-home-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+.back-to-home-btn:hover {
+  background-color: #0056b3;
+}
