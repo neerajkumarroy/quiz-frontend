@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+const base_Url = 'https://quiz-backend-90jn.onrender.com';
+
 
 const AddQuestion = () => {
     const { category } = useParams(); // get category from the URL
@@ -26,7 +28,7 @@ const AddQuestion = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:5050/api/v1/add-question', {
+            const response = await fetch(`${base_Url}/api/v1/add-question`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

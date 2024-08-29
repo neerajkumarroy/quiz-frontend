@@ -1,5 +1,6 @@
 import React, { useState, useEffect, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
+const base_Url = 'https://quiz-backend-90jn.onrender.com';
 
 const ComputerFundamentals = () => {
     const [questions, setQuestions] = useState([]);
@@ -41,7 +42,7 @@ const ComputerFundamentals = () => {
 
     const fetchQuestions = async () => {
         try {
-            const response = await fetch('http://localhost:5050/api/v1/questions/computer-fundamentals');
+            const response = await fetch(`${base_Url}/api/v1/questions/computer-fundamentals`);
             console.log('Response status:', response.status);
             console.log('Response headers:', response.headers);
 
@@ -164,12 +165,12 @@ const ComputerFundamentals = () => {
             {!showInitialPopup && (
                 <>
                     {/* Existing quiz content goes here */}
-                    <h2 className='title-name'>React.js Quiz</h2>
+                    <h2 className='title-name'>Computer Fundamentals Quiz</h2>
                     <div className="header-controls">
                         <button className="slider-toggle-button" onClick={handleToggleSlider}>
                             Question List
                         </button>
-                        <div className="timer">Time Remaining: {formatTime(timeRemaining)}</div>
+                        <div className="timer">Time: {formatTime(timeRemaining)}</div>
                     </div>
 
                     {showPopup && (

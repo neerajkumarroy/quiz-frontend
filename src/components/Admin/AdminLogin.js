@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+const base_Url = 'https://quiz-backend-90jn.onrender.com';
 
 const AdminLogin = () => {
     const [email, setEmail] = useState("");
@@ -22,7 +23,7 @@ const AdminLogin = () => {
         }
 
         try {
-            let response = await fetch('http://localhost:5050/api/v1/login', {
+            let response = await fetch(`${base_Url}/api/v1/login`, {
                 method: 'post',
                 body: JSON.stringify({ email, password }),
                 headers: {

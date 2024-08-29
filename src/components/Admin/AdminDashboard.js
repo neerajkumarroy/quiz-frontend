@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Pie } from 'react-chartjs-2';
 import 'chart.js/auto';
+const base_Url = 'https://quiz-backend-90jn.onrender.com';
+
 
 const AdminDashboard = () => {
     const [questionCounts, setQuestionCounts] = useState({
@@ -14,10 +16,10 @@ const AdminDashboard = () => {
     const navigate = useNavigate();
 
     const categoryAPIs = {
-        'current-affairs': 'http://localhost:5050/api/v1/questions/current-affairs',
-        'computer-fundamentals': 'http://localhost:5050/api/v1/questions/computer-fundamentals',
-        'react-js': 'http://localhost:5050/api/v1/questions/react-js',
-        'seo': 'http://localhost:5050/api/v1/questions/seo'
+        'current-affairs': `${base_Url}/api/v1/questions/current-affairs`,
+        'computer-fundamentals': `${base_Url}/api/v1/questions/computer-fundamentals`,
+        'react-js': `${base_Url}/api/v1/questions/react-js`,
+        'seo': `${base_Url}/api/v1/questions/seo`
     };
 
     useEffect(() => {

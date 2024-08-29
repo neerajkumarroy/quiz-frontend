@@ -1110,6 +1110,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   text-align: center;
+  height: 216px;
 }
 
 .overlay {
@@ -1120,6 +1121,11 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 500;
+}
+@media (max-width: 414px) {
+  .initial-popup {
+    padding: 18px;
+  }
 }
 
 /* ----------------------------------------------------Home Page Css------------------------------------body */
@@ -1179,7 +1185,7 @@ body {
 }
 @media (max-width: 428px) {
   .homepage-container {
-    margin-top: 222px;
+    margin-top: 62px;
   }
 }
 @media (max-width: 360px) {

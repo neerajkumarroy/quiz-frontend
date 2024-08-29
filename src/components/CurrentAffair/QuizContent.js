@@ -1,5 +1,6 @@
 import React, { useState, useEffect, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
+const base_Url = 'https://quiz-backend-90jn.onrender.com';
 
 const QuizContent = () => {
     const [questions, setQuestions] = useState([]);
@@ -41,7 +42,7 @@ const QuizContent = () => {
 
     const fetchQuestions = async () => {
         try {
-            const response = await fetch('http://localhost:5050/api/v1/questions/current-affairs');
+            const response = await fetch(`${base_Url}/api/v1/questions/current-affairs`);
             console.log('Response status-Neeraj:', response.status);
             console.log('Response headers-Neeraj:', response.headers);
 

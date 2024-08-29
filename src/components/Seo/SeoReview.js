@@ -1,5 +1,7 @@
 import React, { useEffect, useState, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
+const base_Url = 'https://quiz-backend-90jn.onrender.com';
+
 
 
 const SeoReview = ({ location }) => {
@@ -13,7 +15,7 @@ const SeoReview = ({ location }) => {
 
     const fetchQuestions = async () => {
         try {
-            const response = await fetch('http://localhost:5050/api/v1/questions/seo');
+            const response = await fetch(`${base_Url}/api/v1/questions/seo`);
             const text = await response.text();
             if (!response.ok) {
                 throw new Error(`Failed to fetch questions: ${response.status} ${response.statusText}`);
