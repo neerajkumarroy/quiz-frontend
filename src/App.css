@@ -258,7 +258,6 @@ body {
   display: flex;
   justify-content: center; /* Center-aligns the buttons horizontally */
   gap: 10px; /* Space between buttons */
-  padding: 1rem; /* More padding around the container */
   position: fixed; /* Fixes the container at the bottom */
   bottom: 0; /* Aligns the container to the bottom of the viewport */
   left: 0; /* Aligns the container to the left edge */
