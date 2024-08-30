@@ -1251,7 +1251,7 @@ body {
 .footer-section h4 {
   margin-bottom: 20px;
   font-size: 18px;
-  color: #007bff;
+  color: #f49025;
   text-transform: uppercase;
 }
 
@@ -1271,6 +1271,7 @@ body {
 
 .footer-section a:hover {
   text-decoration: underline;
+  color: blue;
 }
 
 .footer-social a {
