@@ -74,7 +74,7 @@ body {
 
 /*------------------------------------------------------------------------------------------------------------------------------- Header Styles */
 .header {
-  background-color: #5b5461;
+  background-color: rgba(24, 43, 55, 0.8); /* 80% opacity */
   color: #ecf0f1;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -102,9 +102,10 @@ body {
   display: none;
   background: none;
   border: none;
-  color: #ecf0f1;
+  color: #f44017;
   font-size: 1.5rem;
   cursor: pointer;
+  margin-left: 341px;
 }
 
 .header nav ul {
@@ -168,7 +169,7 @@ body {
 
   .header nav ul li a {
     display: block;
-    padding: 10px 0;
+    padding: 7px 10;
   }
 }
 
@@ -188,10 +189,10 @@ body {
   padding: 20px;
   max-width: 1200px; /* Limit the width of the page */
   margin: auto; /* Center the page */
-  background-color: #f9f9f9; /* Light background color for contrast */
   border-radius: 8px; /* Rounded corners for a modern look */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   margin-top: 40px;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
 .question-container {
@@ -228,14 +229,14 @@ body {
 
 .question-container p {
   padding: 15px;
-  background: rgb(239, 239, 239); /* Slightly lighter gray background */
+  background: rgb(219, 180, 180); /* Slightly lighter gray background */
   border-radius: 4px;
   font-weight: bold; /* Make question text bold */
 }
 .title-name {
   text-align: center;
   font-weight: bold;
-  color: #1748ce;
+  color: #eaebee;
 }
 
 .question-container form {
@@ -418,7 +419,7 @@ body {
 .question-container {
   margin-bottom: 20px;
   padding: 15px;
-  background-color: #fff;
+  background-color: #889fe3;
   border-radius: 8px;
   border: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -1225,62 +1226,59 @@ body {
   background-color: #0056b3;
 }
 
-/* ///////////////////////// */
-.review-content {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-top: 135px;
-  max-width: 100%;
-}
-.review-content h2 {
-  text-align: center;
-  color: #895eff;
+/* ----------------------------------------Footer Component CSS------------------------------- */
+.footer {
+  background-color: #e6f0fa;
+  color: #333;
+  padding: 40px 20px;
+  font-family: "Arial", sans-serif;
 }
 
-.question-container {
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 15px;
+  min-width: 200px;
+}
+
+.footer-section h4 {
   margin-bottom: 20px;
+  font-size: 18px;
+  color: #007bff;
+  text-transform: uppercase;
 }
 
-.question-container p {
-  font-weight: bold;
-}
-
-ul {
-  list-style-type: none;
+.footer-section p,
+.footer-section ul {
+  margin: 0;
   padding: 0;
+  list-style: none;
+  line-height: 1.8;
+  font-size: 14px;
 }
 
-li.option {
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.footer-section a {
+  color: #333;
+  text-decoration: none;
 }
 
-li.correct {
-  background-color: green;
-  color: white;
+.footer-section a:hover {
+  text-decoration: underline;
 }
 
-li.incorrect {
-  background-color: red;
-  color: white;
-}
-.back-to-home-btn {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  text-align: center;
+.footer-social a {
+  color: #007bff;
+  margin-right: 15px;
+  font-size: 20px;
 }
 
-.back-to-home-btn:hover {
-  background-color: #0056b3;
+.footer-social a:hover {
+  color: #0056b3;
 }

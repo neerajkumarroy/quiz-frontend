@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import Header from './components/Header';
+import Footer from './components/Footer';  // Import the Footer component
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import HomePage from './components/Home.js';
@@ -28,10 +29,8 @@ import SeoQuiz from './components/Seo/SeoQuiz.js';
 import SeoResult from './components/Seo/SeoResult.js';
 import SeoReview from './components/Seo/SeoReview.js';
 
-
-
 import SignupError from './components/SignupError.js';
-import PrivateComponent from './components/PrivateComponent.js';  // Import the ProtectedRoute component
+import PrivateComponent from './components/PrivateComponent.js';  // Import the PrivateComponent component
 
 function App() {
   return (
@@ -56,8 +55,6 @@ function App() {
             <Route path="/quiz/react-review" element={<ReactReview />} />
             <Route path="/quiz/react-privew" element={<ReactPrview />} />
 
-
-
             <Route path="/quiz/seo" element={<SeoQuiz />} />
             <Route path="/quiz/seo-result" element={<SeoResult />} />
             <Route path="/quiz/seo-review" element={<SeoReview />} />
@@ -65,7 +62,7 @@ function App() {
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/signup-error" element={<SignupError />} />
 
-            {/* Protect the Admin routes using the ProtectedRoute component */}
+            {/* Protect the Admin routes using the PrivateComponent component */}
             <Route
               path="/admin"
               element={
@@ -84,6 +81,7 @@ function App() {
             />
           </Routes>
         </div>
+        <Footer />
       </div>
     </Router>
   );
