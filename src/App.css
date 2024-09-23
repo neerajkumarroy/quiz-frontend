@@ -1185,7 +1185,7 @@ body {
   text-align: center;
   font-size: 40px;
 }
-/* Media queries for very small screens */
+/* Media queries for very small screens ...*/
 @media (max-width: 512px) {
   .home-category-card {
     width: 246px;
