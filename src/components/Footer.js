@@ -29,7 +29,7 @@ function Footer() {
                     <h4>Get in Touch</h4>
                     <p><i className="fas fa-phone"></i> +91 8445150766</p>
                     <p><i className="fas fa-phone"></i> +91 8445541691</p>
-                    <p><i className="fas fa-envelope"></i> <a href="mailto:datastringneeraj@gmail.com">Quiz@system.com</a></p>
+                    <p><i className="fas fa-envelope"></i> <a href="mailto:datastringneeraj@gmail.com">neerajkumarroyss@gmail.com</a></p>
                     <p><i className="fas fa-map-marker-alt"></i> A- 23, IT Park, Dehradun, Uttarakhand, India, PIN - 248001.</p>
                 </div>
 

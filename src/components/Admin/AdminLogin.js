@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const base_Url = 'https://quiz-backend-90jn.onrender.com';
 
 const AdminLogin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
+    const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState(false);
     const navigate = useNavigate();
 
@@ -19,12 +22,13 @@ const AdminLogin = () => {
     const handleLogin = async () => {
         if (!email || !password) {
             setError(true);
-            return false;
+            toast.error("Please enter both email and password.");
+            return;
         }
 
         try {
             let response = await fetch(`${base_Url}/api/v1/login`, {
-                method: 'post',
+                method: 'POST',
                 body: JSON.stringify({ email, password }),
                 headers: {
                     'Content-Type': 'application/json'
@@ -39,30 +43,32 @@ const AdminLogin = () => {
                 result = JSON.parse(responseText);
             } catch (error) {
                 console.error('Error parsing JSON:', error);
-                alert('Server response is not valid JSON');
+                toast.error('Server response is not valid JSON');
                 return;
             }
 
             if (result.auth) {
+                toast.success('Login Successful...');
                 localStorage.setItem('user', JSON.stringify(result.user));
                 localStorage.setItem("token", JSON.stringify(result.auth));
-                alert("Login Successful...");
+                toast.success('Login Successful...');
                 navigate("/admin");
             } else {
-                alert("Invalid email or password. Please try again.");
+                toast.error('Invalid email or password. Please try again.');
             }
         } catch (error) {
             console.error('Fetch error:', error);
-            alert('An error occurred while logging in. Please try again later.');
+            toast.error('An error occurred while logging in. Please try again later.');
         }
     };
 
     const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword); // Toggle the password visibility state
+        setShowPassword(!showPassword);
     };
 
     return (
         <div className='admin-login-container'>
+            <ToastContainer /> {/* Ensure this is included in the component */}
             <div className='admin-login-box'>
                 <h1 className='admin-login-heading'>Admin Login</h1>
                 <p className='admin-login-subheading'>
@@ -82,13 +88,13 @@ const AdminLogin = () => {
                     <div className='password-container'>
                         <input
                             className='admin-login-input'
-                            type={showPassword ? 'text' : 'password'} // Toggle between text and password
+                            type={showPassword ? 'text' : 'password'}
                             placeholder='Enter your password'
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
                         <span className='password-toggle-icon' onClick={togglePasswordVisibility}>
-                            {showPassword ? '👁️' : '🙈'} {/* Display eye icon based on state */}
+                            {showPassword ? '👁️' : '🙈'}
                         </span>
                     </div>
                     {error && !password && <span className='admin-login-error'>*Please enter a valid password.</span>}
